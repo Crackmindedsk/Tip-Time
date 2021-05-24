@@ -6,6 +6,10 @@ plugins {
 android {
     compileSdkVersion 30
 
+    buildFeatures{
+        viewBinding = true
+    }
+
     defaultConfig {
         applicationId "sharlene.work.tiptime"
         minSdkVersion 19
