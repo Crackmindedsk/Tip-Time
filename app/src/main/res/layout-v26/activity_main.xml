@@ -7,21 +7,31 @@
     android:padding="16dp"
     tools:context=".MainActivity">
 
-    <EditText
+
+    <com.google.android.material.textfield.TextInputLayout
         android:id="@+id/cost_of_service"
         android:layout_width="160dp"
         android:layout_height="wrap_content"
         android:hint="@string/cost_of_service"
-        android:importantForAutofill="no"
-        android:inputType="numberDecimal"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent" />
+        app:layout_constraintTop_toTopOf="parent">
 
+        <com.google.android.material.textfield.TextInputEditText
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:id="@+id/cost_of_service_text"
+            android:inputType="numberDecimal"
+            />
+
+    </com.google.android.material.textfield.TextInputLayout>
     <TextView
         android:id="@+id/service_question"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
+        android:layout_marginTop="15dp"
         android:text="@string/how_was_the_service"
+        android:textSize="20sp"
+        android:textColor="@android:color/primary_text_light"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/cost_of_service"
         android:defaultFocusHighlightEnabled="true"/>
@@ -32,7 +42,8 @@
         android:layout_height="wrap_content"
         android:orientation="vertical"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/service_question">
+        app:layout_constraintTop_toBottomOf="@+id/service_question"
+        android:checkedButton="@id/option_fifteen_percent">
         <!--add Radio button here-->
         <RadioButton
             android:id="@+id/option_twenty_percent"
@@ -58,8 +69,10 @@
         android:id="@+id/round_up_switch"
         android:layout_width="0dp"
         android:layout_height="wrap_content"
+        android:layout_marginTop="15dp"
         android:checked="true"
         android:text="@string/round_up_tip"
+        android:textSize="15sp"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@id/tip_option"
@@ -69,6 +82,7 @@
         android:id="@+id/calculate_button"
         android:layout_width="0dp"
         android:layout_height="wrap_content"
+        android:layout_marginTop="30dp"
         android:text="@string/calculate"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
