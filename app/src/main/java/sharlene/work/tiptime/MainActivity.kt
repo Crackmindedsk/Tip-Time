@@ -1,6 +1,10 @@
 package sharlene.work.tiptime
 
+import android.content.Context
 import android.os.Bundle
+import android.view.KeyEvent
+import android.view.View
+import android.view.inputmethod.InputMethodManager
 import androidx.appcompat.app.AppCompatActivity
 import sharlene.work.tiptime.databinding.ActivityMainBinding
 
@@ -16,6 +20,7 @@ class MainActivity : AppCompatActivity() {
         binding.calculateButton.setOnClickListener {
             calculateTip()
         }
+        binding.costOfServiceText.setOnKeyListener { view, keycode, _->handleKeyEvent(view, keycode)  }
     }
 
     private fun calculateTip() {
@@ -43,5 +48,14 @@ class MainActivity : AppCompatActivity() {
         val formattedTip = java.text.NumberFormat.getCurrencyInstance().format(tip)
 
         binding.tipResult.text = getString(R.string.tip_amount, formattedTip)
+    }
+    fun handleKeyEvent(view:View,keycode:Int):Boolean{
+        if(keycode==KeyEvent.KEYCODE_ENTER){
+            //hide the keyboard
+            val inputMethodManager = getSystemService(Context.INPUT_METHOD_SERVICE)as InputMethodManager
+            inputMethodManager.hideSoftInputFromWindow(view.windowToken,0)
+            return true
+        }
+        return false
     }
 }
