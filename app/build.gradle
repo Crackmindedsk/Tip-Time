@@ -6,7 +6,7 @@ plugins {
 android {
     compileSdkVersion 30
 
-    buildFeatures{
+    buildFeatures {
         viewBinding = true
     }
 

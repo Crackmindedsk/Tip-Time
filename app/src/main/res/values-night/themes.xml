@@ -16,7 +16,8 @@
         <!--Switches-->
         <item name="switchStyle">@style/Widget.TipTime.CompoundButton.Switch</item>
         <!--Text input fields-->
-        <item name="textInputStyle">@style/Widget.MaterialComponents.TextInputLayout.FilledBox</item>
+        <item name="textInputStyle">@style/Widget.MaterialComponents.TextInputLayout.FilledBox
+        </item>
         <!-- Customize your theme here. -->
     </style>
 </resources>
