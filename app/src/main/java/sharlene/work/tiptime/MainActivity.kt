@@ -32,7 +32,7 @@ class MainActivity : AppCompatActivity() {
         val stringInTextField = binding.costOfServiceText.text.toString()
         val cost = stringInTextField.toDoubleOrNull()
 
-        val stringInBill = binding.billAmountText?.text.toString()
+        val stringInBill = binding.billAmountText.text.toString()
         val bill = stringInBill.toDoubleOrNull()
         var amount=bill
         var tip:Double
@@ -81,7 +81,7 @@ class MainActivity : AppCompatActivity() {
         binding.tipResult.text = getString(R.string.tip_amount, formattedTip)
         val formattedAmount = java.text.NumberFormat.getCurrencyInstance().format(amount)
 
-        binding.totalAmount?.text = getString(R.string.total_amount, formattedAmount)
+        binding.totalAmount.text = getString(R.string.total_amount, formattedAmount)
     }
 
     private fun handleKeyEvent(view: View, keycode: Int): Boolean {
