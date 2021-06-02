@@ -35,8 +35,8 @@ class MainActivity : AppCompatActivity() {
 
         val stringInBill = binding.billAmountText.text.toString()
         val bill = stringInBill.toDoubleOrNull()
-        var amount=bill
-        var tip:Double
+        var amount = bill
+        var tip: Double
         val tipPercentage = when (binding.tipOption.checkedRadioButtonId) {
             R.id.option_twenty_percent -> 0.20
             R.id.option_eighteen_percent -> 0.18
@@ -45,21 +45,21 @@ class MainActivity : AppCompatActivity() {
 
 
 
-        if((bill==0.0 || bill==null) && (cost==0.0 ||cost==null)){
-            displayTip(0.0,0.0)
+        if ((bill == 0.0 || bill == null) && (cost == 0.0 || cost == null)) {
+            displayTip(0.0, 0.0)
             return
-        }else if (cost == null || cost == 0.0) {
+        } else if (cost == null || cost == 0.0) {
             if (binding.roundUpSwitch.isChecked) {
                 amount = amount?.let { kotlin.math.ceil(it) }
             }
-            displayTip(0.0,amount)
+            displayTip(0.0, amount)
             return
-        }else if(bill == null || bill == 0.0) {
+        } else if (bill == null || bill == 0.0) {
             tip = tipPercentage * cost
             if (binding.roundUpSwitch.isChecked) {
                 tip = kotlin.math.ceil(tip)
             }
-            displayTip(tip,tip)
+            displayTip(tip, tip)
             return
         }
 
@@ -70,8 +70,7 @@ class MainActivity : AppCompatActivity() {
             tip = kotlin.math.ceil(tip)
             amount = kotlin.math.ceil(amount)
         }
-        displayTip(tip,amount)
-
+        displayTip(tip, amount)
 
 
     }
