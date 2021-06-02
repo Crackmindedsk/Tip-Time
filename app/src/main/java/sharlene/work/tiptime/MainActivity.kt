@@ -26,6 +26,7 @@ class MainActivity : AppCompatActivity() {
                 keycode
             )
         }
+
     }
 
     private fun calculateTip() {
@@ -58,7 +59,7 @@ class MainActivity : AppCompatActivity() {
             if (binding.roundUpSwitch.isChecked) {
                 tip = kotlin.math.ceil(tip)
             }
-            displayTip(tip,0.0)
+            displayTip(tip,tip)
             return
         }
 
