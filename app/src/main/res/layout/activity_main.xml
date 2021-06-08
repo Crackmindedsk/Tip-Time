@@ -63,7 +63,9 @@
                 android:id="@+id/cost_of_service_text"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:inputType="numberDecimal" />
+                android:fontFamily="@font/product_sans_regular"
+                android:inputType="numberDecimal"
+                app:fontFamily="@font/product_sans_regular" />
 
         </com.google.android.material.textfield.TextInputLayout>
 
@@ -90,6 +92,7 @@
 
         <RadioGroup
             android:id="@+id/tip_option"
+            style="@style/Widget.TipTime.CompoundButton.RadioButton"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:checkedButton="@id/option_fifteen_percent"
@@ -101,18 +104,21 @@
                 android:id="@+id/option_twenty_percent"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
+                android:fontFamily="@font/product_sans_regular"
                 android:text="@string/amazing_20" />
 
             <RadioButton
                 android:id="@+id/option_eighteen_percent"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
+                android:fontFamily="@font/product_sans_regular"
                 android:text="@string/good_18" />
 
             <RadioButton
                 android:id="@+id/option_fifteen_percent"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
+                android:fontFamily="@font/product_sans_regular"
                 android:text="@string/ok_15" />
         </RadioGroup>
 
@@ -128,6 +134,7 @@
 
         <Switch
             android:id="@+id/round_up_switch"
+            style="@style/Widget.TipTime.CompoundButton.Switch"
             android:layout_width="0dp"
             android:layout_height="wrap_content"
             android:layout_marginStart="15dp"
@@ -139,13 +146,15 @@
             app:layout_constraintTop_toBottomOf="@id/tip_option"
             tools:ignore="UseSwitchCompatOrMaterialXml" />
 
-        <Button
+        <com.google.android.material.button.MaterialButton
             android:id="@+id/calculate_button"
+            style="@style/Widget.TipTime.Button"
             android:layout_width="0dp"
-            android:layout_height="wrap_content"
+            android:layout_height="65dp"
             android:layout_marginTop="30dp"
             android:shadowColor="#F40A0A"
             android:text="@string/calculate"
+            app:cornerRadius="12dp"
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintTop_toBottomOf="@id/round_up_switch" />
@@ -165,7 +174,7 @@
             style="@style/Widget.TipTime.TextView"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:layout_marginTop="15dp"
+            android:layout_marginTop="8dp"
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintTop_toBottomOf="@id/tip_result"
             tools:text="@string/total_amount" />
