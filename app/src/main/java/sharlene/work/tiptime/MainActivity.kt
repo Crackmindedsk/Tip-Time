@@ -8,7 +8,7 @@ import android.view.View
 import android.view.inputmethod.InputMethodManager
 import android.widget.Toast
 import androidx.appcompat.app.AppCompatActivity
-import androidx.core.content.res.ResourcesCompat
+import com.google.android.gms.ads.MobileAds
 import sharlene.work.tiptime.databinding.ActivityMainBinding
 import java.text.NumberFormat.getCurrencyInstance
 import kotlin.math.ceil
@@ -22,6 +22,9 @@ class MainActivity : AppCompatActivity() {
         super.onCreate(savedInstanceState)
         binding = ActivityMainBinding.inflate(layoutInflater)
         setContentView(binding.root)
+
+        MobileAds.initialize(this){}
+
         binding.calculateButton.setOnClickListener {
             calculateTip()
         }
