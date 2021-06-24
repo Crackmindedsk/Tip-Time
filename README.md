@@ -9,3 +9,8 @@ The Calculator calculates the tip for the service provided based on your chosen 
 
 
 ## Check the app on Google Play : https://play.google.com/store/apps/details?id=sharlene.work.tiptime
+
+<img align="left" width="200" style="margin:10px" src="/AppScreenshots/7-inch1.png">
+<img align="left" width="200" style="margin:10px" src="/AppScreenshots/7-inch2.png">
+<img align="left" width="400" height="200" style="margin:10px" src="/AppScreenshots/7-inch3.png">
+
